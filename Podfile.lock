@@ -1,0 +1,59 @@
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireNetworkActivityLogger (2.3.0):
+    - Alamofire (~> 4.6)
+  - Disk (0.4.0)
+  - FontAwesome.swift (1.4.8)
+  - IQKeyboardManager (6.2.0)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - SwiftMessages (6.0.2):
+    - SwiftMessages/App (= 6.0.2)
+  - SwiftMessages/App (6.0.2)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - AlamofireNetworkActivityLogger
+  - Disk
+  - FontAwesome.swift
+  - IQKeyboardManager
+  - NVActivityIndicatorView
+  - RealmSwift (~> 3.13)
+  - SwiftMessages (~> 6.0.0)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - Disk
+    - FontAwesome.swift
+    - IQKeyboardManager
+    - NVActivityIndicatorView
+    - Realm
+    - RealmSwift
+    - SwiftMessages
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
+  Disk: ef2956657d5bb56034b38b29b352170165226440
+  FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 1ae7d221682d19b8c9af6fff3fc5cf18c5f479e6
+
+COCOAPODS: 1.5.3

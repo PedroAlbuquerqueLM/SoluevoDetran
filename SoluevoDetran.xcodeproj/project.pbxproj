@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E6FB5D67AB269719F801B68 /* Pods_SoluevoDetranTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46BD8341FEAACBE2DF20BF9 /* Pods_SoluevoDetranTests.framework */; };
 		710724272237FB1200E92D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710724262237FB1200E92D55 /* AppDelegate.swift */; };
-		710724292237FB1200E92D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710724282237FB1200E92D55 /* ViewController.swift */; };
+		710724292237FB1200E92D55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710724282237FB1200E92D55 /* LoginViewController.swift */; };
 		7107242C2237FB1200E92D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7107242A2237FB1200E92D55 /* Main.storyboard */; };
 		7107242E2237FB1400E92D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7107242D2237FB1400E92D55 /* Assets.xcassets */; };
 		710724312237FB1400E92D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7107242F2237FB1400E92D55 /* LaunchScreen.storyboard */; };
 		7107243C2237FB1400E92D55 /* SoluevoDetranTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107243B2237FB1400E92D55 /* SoluevoDetranTests.swift */; };
 		710724472237FB1400E92D55 /* SoluevoDetranUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710724462237FB1400E92D55 /* SoluevoDetranUITests.swift */; };
+		710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C7C223B4D1F0059F2FB /* Utils.swift */; };
+		710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C7F223B51F10059F2FB /* UserDAO.swift */; };
+		710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C82223B546D0059F2FB /* RealmManager.swift */; };
+		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
+		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
+		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
+		717C71012239844D00A197CD /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FE2239844D00A197CD /* LoginRouter.swift */; };
+		717C71022239844D00A197CD /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FF2239844D00A197CD /* RouterManager.swift */; };
+		E0413BE6F799E9AE36A236E2 /* Pods_SoluevoDetranUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8D7FA442DE67101412EC8E /* Pods_SoluevoDetranUITests.framework */; };
+		E1830989F733EC1CF17CAE78 /* Pods_SoluevoDetran.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847D05020AF328F0445B4CDA /* Pods_SoluevoDetran.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12ED82242C5066DAECB70479 /* Pods-SoluevoDetran.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetran.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetran/Pods-SoluevoDetran.release.xcconfig"; sourceTree = "<group>"; };
+		15250F4ACB795FA0AC47F467 /* Pods-SoluevoDetranTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetranTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetranTests/Pods-SoluevoDetranTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DE1079B71AC50391F48775C /* Pods-SoluevoDetran.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetran.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetran/Pods-SoluevoDetran.debug.xcconfig"; sourceTree = "<group>"; };
 		710724232237FB1200E92D55 /* SoluevoDetran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoluevoDetran.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710724262237FB1200E92D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		710724282237FB1200E92D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		710724282237FB1200E92D55 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7107242B2237FB1200E92D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7107242D2237FB1400E92D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		710724302237FB1400E92D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +61,21 @@
 		710724422237FB1400E92D55 /* SoluevoDetranUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoluevoDetranUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		710724462237FB1400E92D55 /* SoluevoDetranUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoluevoDetranUITests.swift; sourceTree = "<group>"; };
 		710724482237FB1400E92D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		710B1C7C223B4D1F0059F2FB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		710B1C7F223B51F10059F2FB /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		710B1C82223B546D0059F2FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoluevoDetran.entitlements; sourceTree = "<group>"; };
+		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
+		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		717C70FE2239844D00A197CD /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		717C70FF2239844D00A197CD /* RouterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
+		78FEC21E365E61A6B7380CCC /* Pods-SoluevoDetranUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetranUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetranUITests/Pods-SoluevoDetranUITests.release.xcconfig"; sourceTree = "<group>"; };
+		847D05020AF328F0445B4CDA /* Pods_SoluevoDetran.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoluevoDetran.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2C5FB5B2763B47F261B568 /* Pods-SoluevoDetranTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetranTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetranTests/Pods-SoluevoDetranTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE8D7FA442DE67101412EC8E /* Pods_SoluevoDetranUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoluevoDetranUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46BD8341FEAACBE2DF20BF9 /* Pods_SoluevoDetranTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoluevoDetranTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF53CE1577C36A906B4EF811 /* Pods-SoluevoDetranUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetranUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetranUITests/Pods-SoluevoDetranUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1830989F733EC1CF17CAE78 /* Pods_SoluevoDetran.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6FB5D67AB269719F801B68 /* Pods_SoluevoDetranTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +99,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0413BE6F799E9AE36A236E2 /* Pods_SoluevoDetranUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426FD51717012BEB29A6D5DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				847D05020AF328F0445B4CDA /* Pods_SoluevoDetran.framework */,
+				D46BD8341FEAACBE2DF20BF9 /* Pods_SoluevoDetranTests.framework */,
+				CE8D7FA442DE67101412EC8E /* Pods_SoluevoDetranUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7107241A2237FB1200E92D55 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +123,8 @@
 				7107243A2237FB1400E92D55 /* SoluevoDetranTests */,
 				710724452237FB1400E92D55 /* SoluevoDetranUITests */,
 				710724242237FB1200E92D55 /* Products */,
+				F73E2D303510099E3C01C711 /* Pods */,
+				426FD51717012BEB29A6D5DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +141,13 @@
 		710724252237FB1200E92D55 /* SoluevoDetran */ = {
 			isa = PBXGroup;
 			children = (
+				710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */,
 				710724262237FB1200E92D55 /* AppDelegate.swift */,
-				710724282237FB1200E92D55 /* ViewController.swift */,
+				710724282237FB1200E92D55 /* LoginViewController.swift */,
+				710B1C7C223B4D1F0059F2FB /* Utils.swift */,
+				710B1C7E223B51E70059F2FB /* DAO */,
+				715C84D92239875300B844D1 /* Models */,
+				717C70F62239841500A197CD /* API */,
 				7107242A2237FB1200E92D55 /* Main.storyboard */,
 				7107242D2237FB1400E92D55 /* Assets.xcassets */,
 				7107242F2237FB1400E92D55 /* LaunchScreen.storyboard */,
@@ -125,6 +174,55 @@
 			path = SoluevoDetranUITests;
 			sourceTree = "<group>";
 		};
+		710B1C7E223B51E70059F2FB /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				710B1C81223B54570059F2FB /* Manager */,
+				710B1C7F223B51F10059F2FB /* UserDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		710B1C81223B54570059F2FB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				710B1C82223B546D0059F2FB /* RealmManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		715C84D92239875300B844D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				715C84DA2239875F00B844D1 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		717C70F62239841500A197CD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				717C70FD2239844D00A197CD /* APIManager.swift */,
+				717C70FF2239844D00A197CD /* RouterManager.swift */,
+				717C70FE2239844D00A197CD /* LoginRouter.swift */,
+				715C84DC22399A4F00B844D1 /* ContractsRouter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F73E2D303510099E3C01C711 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DE1079B71AC50391F48775C /* Pods-SoluevoDetran.debug.xcconfig */,
+				12ED82242C5066DAECB70479 /* Pods-SoluevoDetran.release.xcconfig */,
+				15250F4ACB795FA0AC47F467 /* Pods-SoluevoDetranTests.debug.xcconfig */,
+				BA2C5FB5B2763B47F261B568 /* Pods-SoluevoDetranTests.release.xcconfig */,
+				DF53CE1577C36A906B4EF811 /* Pods-SoluevoDetranUITests.debug.xcconfig */,
+				78FEC21E365E61A6B7380CCC /* Pods-SoluevoDetranUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7107244B2237FB1400E92D55 /* Build configuration list for PBXNativeTarget "SoluevoDetran" */;
 			buildPhases = (
+				8AF66D83F1CD097EE7002144 /* [CP] Check Pods Manifest.lock */,
 				7107241F2237FB1200E92D55 /* Sources */,
 				710724202237FB1200E92D55 /* Frameworks */,
 				710724212237FB1200E92D55 /* Resources */,
+				697B15328D89FECA828B5D98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7107244E2237FB1400E92D55 /* Build configuration list for PBXNativeTarget "SoluevoDetranTests" */;
 			buildPhases = (
+				67D9E8DBD6D915EC17104721 /* [CP] Check Pods Manifest.lock */,
 				710724332237FB1400E92D55 /* Sources */,
 				710724342237FB1400E92D55 /* Frameworks */,
 				710724352237FB1400E92D55 /* Resources */,
@@ -167,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 710724512237FB1400E92D55 /* Build configuration list for PBXNativeTarget "SoluevoDetranUITests" */;
 			buildPhases = (
+				0E6CEF8DED20ABCB7AA4DD86 /* [CP] Check Pods Manifest.lock */,
 				7107243E2237FB1400E92D55 /* Sources */,
 				7107243F2237FB1400E92D55 /* Frameworks */,
 				710724402237FB1400E92D55 /* Resources */,
@@ -193,6 +295,11 @@
 				TargetAttributes = {
 					710724222237FB1200E92D55 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					710724362237FB1400E92D55 = {
 						CreatedOnToolsVersion = 10.1;
@@ -251,13 +358,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E6CEF8DED20ABCB7AA4DD86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoluevoDetranUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67D9E8DBD6D915EC17104721 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoluevoDetranTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		697B15328D89FECA828B5D98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SoluevoDetran/Pods-SoluevoDetran-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoluevoDetran/Pods-SoluevoDetran-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AF66D83F1CD097EE7002144 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoluevoDetran-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7107241F2237FB1200E92D55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				710724292237FB1200E92D55 /* ViewController.swift in Sources */,
+				710724292237FB1200E92D55 /* LoginViewController.swift in Sources */,
 				710724272237FB1200E92D55 /* AppDelegate.swift in Sources */,
+				715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */,
+				715C84DB2239875F00B844D1 /* User.swift in Sources */,
+				710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */,
+				717C71012239844D00A197CD /* LoginRouter.swift in Sources */,
+				717C71022239844D00A197CD /* RouterManager.swift in Sources */,
+				710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */,
+				717C71002239844D00A197CD /* APIManager.swift in Sources */,
+				710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,11 +654,14 @@
 		};
 		7107244C2237FB1400E92D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE1079B71AC50391F48775C /* Pods-SoluevoDetran.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SoluevoDetran/SoluevoDetran.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WN88JXG7EP;
 				INFOPLIST_FILE = SoluevoDetran/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +675,14 @@
 		};
 		7107244D2237FB1400E92D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12ED82242C5066DAECB70479 /* Pods-SoluevoDetran.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SoluevoDetran/SoluevoDetran.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WN88JXG7EP;
 				INFOPLIST_FILE = SoluevoDetran/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +696,7 @@
 		};
 		7107244F2237FB1400E92D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15250F4ACB795FA0AC47F467 /* Pods-SoluevoDetranTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +718,7 @@
 		};
 		710724502237FB1400E92D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA2C5FB5B2763B47F261B568 /* Pods-SoluevoDetranTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +740,7 @@
 		};
 		710724522237FB1400E92D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF53CE1577C36A906B4EF811 /* Pods-SoluevoDetranUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +761,7 @@
 		};
 		710724532237FB1400E92D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FEC21E365E61A6B7380CCC /* Pods-SoluevoDetranUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
