@@ -18,6 +18,7 @@
 		710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C7C223B4D1F0059F2FB /* Utils.swift */; };
 		710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C7F223B51F10059F2FB /* UserDAO.swift */; };
 		710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C82223B546D0059F2FB /* RealmManager.swift */; };
+		710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */; };
 		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
@@ -65,6 +66,7 @@
 		710B1C7F223B51F10059F2FB /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		710B1C82223B546D0059F2FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoluevoDetran.entitlements; sourceTree = "<group>"; };
+		710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */,
 				710724262237FB1200E92D55 /* AppDelegate.swift */,
 				710724282237FB1200E92D55 /* LoginViewController.swift */,
+				710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */,
 				710B1C7C223B4D1F0059F2FB /* Utils.swift */,
 				710B1C7E223B51E70059F2FB /* DAO */,
 				715C84D92239875300B844D1 /* Models */,
@@ -474,6 +477,7 @@
 			files = (
 				710724292237FB1200E92D55 /* LoginViewController.swift in Sources */,
 				710724272237FB1200E92D55 /* AppDelegate.swift in Sources */,
+				710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */,
 				715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */,
 				715C84DB2239875F00B844D1 /* User.swift in Sources */,
 				710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */,

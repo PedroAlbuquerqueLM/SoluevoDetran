@@ -13,19 +13,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        realizaLogin()
-        
-    }
-    
-    func realizaLogin() {
-        let params = ["financials_code": 1001,
-                          "username": "a",
-                          "password": "a"] as [String : Any]
-        let rotaLogin = RouterManager.loginRouter(route: .login(params: params))
-        APIManager.sharedInstance.request(route: rotaLogin) { json in
-            UserDAO.saveUser(json: json)
-            APIManager.sharedInstance.setToken(user: UserDAO.getUser()!)
-        }
         
     }
 }
