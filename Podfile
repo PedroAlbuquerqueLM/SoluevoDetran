@@ -16,6 +16,8 @@ target 'SoluevoDetran' do
 	pod 'NVActivityIndicatorView'
 	pod 'FontAwesome.swift'
 	pod 'Disk'
+    pod 'Eureka'
+    pod 'McPicker'
 
   target 'SoluevoDetranTests' do
     inherit! :search_paths

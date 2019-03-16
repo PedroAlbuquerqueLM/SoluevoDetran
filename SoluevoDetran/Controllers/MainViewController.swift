@@ -1,18 +1,15 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  SoluevoDetran
 //
-//  Created by Pedro Albuquerque on 12/03/19.
+//  Created by Pedro Albuquerque on 16/03/19.
 //  Copyright © 2019 Pedro Albuquerque. All rights reserved.
 //
 
 import UIKit
-import Alamofire
 
-class LoginViewController: UIViewController {
-    
+class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
