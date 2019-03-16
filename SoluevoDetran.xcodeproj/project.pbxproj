@@ -18,6 +18,10 @@
 		710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C7C223B4D1F0059F2FB /* Utils.swift */; };
 		710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C7F223B51F10059F2FB /* UserDAO.swift */; };
 		710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B1C82223B546D0059F2FB /* RealmManager.swift */; };
+		710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */; };
+		710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */; };
+		710C92B1223D862500B8EEE5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B0223D862500B8EEE5 /* State.swift */; };
+		710C92B3223D8F1500B8EEE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B2223D8F1500B8EEE5 /* MainViewController.swift */; };
 		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
@@ -65,6 +69,10 @@
 		710B1C7F223B51F10059F2FB /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		710B1C82223B546D0059F2FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoluevoDetran.entitlements; sourceTree = "<group>"; };
+		710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTextFieldView.swift; sourceTree = "<group>"; };
+		710C92B0223D862500B8EEE5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		710C92B2223D8F1500B8EEE5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -143,7 +151,9 @@
 			children = (
 				710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */,
 				710724262237FB1200E92D55 /* AppDelegate.swift */,
-				710724282237FB1200E92D55 /* LoginViewController.swift */,
+				710C92AD223D710F00B8EEE5 /* Views */,
+				710C92AC223D6FBC00B8EEE5 /* Controllers */,
+				710C92AB223D6FAE00B8EEE5 /* ViewModels */,
 				710B1C7C223B4D1F0059F2FB /* Utils.swift */,
 				710B1C7E223B51E70059F2FB /* DAO */,
 				715C84D92239875300B844D1 /* Models */,
@@ -191,10 +201,36 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		710C92AB223D6FAE00B8EEE5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		710C92AC223D6FBC00B8EEE5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				710724282237FB1200E92D55 /* LoginViewController.swift */,
+				710C92B2223D8F1500B8EEE5 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		710C92AD223D710F00B8EEE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		715C84D92239875300B844D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				715C84DA2239875F00B844D1 /* User.swift */,
+				710C92B0223D862500B8EEE5 /* State.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -415,8 +451,10 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -430,8 +468,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -474,11 +514,15 @@
 			files = (
 				710724292237FB1200E92D55 /* LoginViewController.swift in Sources */,
 				710724272237FB1200E92D55 /* AppDelegate.swift in Sources */,
+				710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */,
 				715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */,
 				715C84DB2239875F00B844D1 /* User.swift in Sources */,
 				710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */,
 				717C71012239844D00A197CD /* LoginRouter.swift in Sources */,
+				710C92B3223D8F1500B8EEE5 /* MainViewController.swift in Sources */,
+				710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */,
 				717C71022239844D00A197CD /* RouterManager.swift in Sources */,
+				710C92B1223D862500B8EEE5 /* State.swift in Sources */,
 				710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */,
 				717C71002239844D00A197CD /* APIManager.swift in Sources */,
 				710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */,

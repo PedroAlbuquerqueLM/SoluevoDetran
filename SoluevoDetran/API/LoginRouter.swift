@@ -11,7 +11,7 @@ import Alamofire
 
 enum LoginRouter: RouterConfig {
 
-    case login(params: APIParams)
+    case signIn(params: APIParams)
     case logout()
 
     var endPoint: String {
@@ -28,7 +28,7 @@ enum LoginRouter: RouterConfig {
 
     var params: APIParams {
         switch self {
-        case .login(let params):
+        case .signIn(let params):
             return params
         default:
             return nil

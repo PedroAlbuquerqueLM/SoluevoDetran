@@ -14,13 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         NetworkActivityLogger.shared.startLogging()
         NetworkActivityLogger.shared.level = .debug
+        UserDAO.deleteUser() //REMOVER
+        self.loggedVerify()
         return true
+    }
+    
+    func loggedVerify(){
+        guard UserDAO.getUser() != nil else {
+            let navigationController = UINavigationController(rootViewController: LoginViewController())
+            navigationController.navigationBar.isHidden = true
+            self.window?.rootViewController = navigationController
+            return
+        }
+        let navigationController = UINavigationController(rootViewController: MainViewController())
+        self.window?.rootViewController = navigationController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
