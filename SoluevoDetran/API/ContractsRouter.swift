@@ -11,10 +11,10 @@ import Alamofire
 
 enum ContractsRouter: RouterConfig {
     
-    case detran()
+    case getContracts()
     
     var endPoint: String {
-        return "detran/public/contracts?code=123456789"
+        return "detran/public/contracts"
     }
     
     var method: HTTPMethod {
@@ -34,11 +34,4 @@ enum ContractsRouter: RouterConfig {
         return url
     }
     
-    var headers: APIHeaders {
-        return [
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MTk0OTU54NDMsImlzcyI6IjM1NTA3OTA3ODM4In0.6W8AOQrla4d-e3PS5eGiteFLsEBRY-5hU_jJ4Uxcg5Y"
-        ]
-    }
 }
-

@@ -9,6 +9,8 @@
 import UIKit
 import AlamofireNetworkActivityLogger
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,23 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        window = UIWindow(frame: UIScreen.main.bounds)
         NetworkActivityLogger.shared.startLogging()
         NetworkActivityLogger.shared.level = .debug
-        UserDAO.deleteUser() //REMOVER
-        self.loggedVerify()
+        SessionManager.loggedVerify()
         return true
-    }
-    
-    func loggedVerify(){
-        guard UserDAO.getUser() != nil else {
-            let navigationController = UINavigationController(rootViewController: LoginViewController())
-            navigationController.navigationBar.isHidden = true
-            self.window?.rootViewController = navigationController
-            return
-        }
-        let navigationController = UINavigationController(rootViewController: MainViewController())
-        self.window?.rootViewController = navigationController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

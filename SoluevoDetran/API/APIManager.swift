@@ -35,8 +35,16 @@ class APIManager {
                 return
             }
 
-            let jsonResp: JSON = ["statusCode": status, "resultValue": response.result.value ?? ""]
+            var jsonResp: JSON = ["statusCode": status, "resultValue": response.result.value ?? ""]
 
+            guard status != 401 else {
+                let sessaoExpirada = "Sessão Expirada"
+                jsonResp = ["statusCode": status, "statusMessage": sessaoExpirada]
+                SessionManager.logout()
+                completion(jsonResp)
+                return
+            }
+            
             guard response.result.value != nil else {
                 completion(jsonResp)
                 return
