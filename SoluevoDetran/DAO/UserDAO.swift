@@ -14,6 +14,7 @@ import SwiftyJSON
 class UserDAO {
     
     static func saveUser(json: JSON) {
+        self.deleteUser()
         let realm = RealmManager.getRealm()
         try! realm.write {
             let userDic = json["FinancialUser"].dictionaryValue

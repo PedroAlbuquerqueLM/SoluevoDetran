@@ -55,8 +55,9 @@ extension RouterConfig {
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
-        let dataBody = ((params ?? Dictionary()).toJsonString ?? "").data(using: .utf8) ?? Data()
-        urlRequest.httpBody = dataBody
+        if let dataBody = (params?.toJsonString)?.data(using: .utf8){
+            urlRequest.httpBody = dataBody
+        }
         urlRequest.allHTTPHeaderFields = headers
         return urlRequest
     }

@@ -9,7 +9,22 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    let viewModel = ContractsViewModel()
+    var contracts: [ContractModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bind()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.loadContracts()
+    }
+    
+    func bind() {
+        viewModel.getContracts = { [unowned self] in
+            
+        }
     }
 }

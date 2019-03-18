@@ -22,6 +22,9 @@
 		710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */; };
 		710C92B1223D862500B8EEE5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B0223D862500B8EEE5 /* State.swift */; };
 		710C92B3223D8F1500B8EEE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B2223D8F1500B8EEE5 /* MainViewController.swift */; };
+		710C92B5223F3D1300B8EEE5 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B4223F3D1300B8EEE5 /* Contract.swift */; };
+		710C92B7223F3D9000B8EEE5 /* ContractDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */; };
+		710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */; };
 		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
@@ -73,6 +76,9 @@
 		710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTextFieldView.swift; sourceTree = "<group>"; };
 		710C92B0223D862500B8EEE5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		710C92B2223D8F1500B8EEE5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		710C92B4223F3D1300B8EEE5 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDAO.swift; sourceTree = "<group>"; };
+		710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsViewModel.swift; sourceTree = "<group>"; };
 		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			children = (
 				710B1C81223B54570059F2FB /* Manager */,
 				710B1C7F223B51F10059F2FB /* UserDAO.swift */,
+				710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */,
+				710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				715C84DA2239875F00B844D1 /* User.swift */,
+				710C92B4223F3D1300B8EEE5 /* Contract.swift */,
 				710C92B0223D862500B8EEE5 /* State.swift */,
 			);
 			path = Models;
@@ -515,6 +524,7 @@
 				710724292237FB1200E92D55 /* LoginViewController.swift in Sources */,
 				710724272237FB1200E92D55 /* AppDelegate.swift in Sources */,
 				710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */,
+				710C92B5223F3D1300B8EEE5 /* Contract.swift in Sources */,
 				715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */,
 				715C84DB2239875F00B844D1 /* User.swift in Sources */,
 				710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */,
@@ -525,6 +535,8 @@
 				710C92B1223D862500B8EEE5 /* State.swift in Sources */,
 				710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */,
 				717C71002239844D00A197CD /* APIManager.swift in Sources */,
+				710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */,
+				710C92B7223F3D9000B8EEE5 /* ContractDAO.swift in Sources */,
 				710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,19 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NetworkActivityLogger.shared.startLogging()
         NetworkActivityLogger.shared.level = .debug
-        UserDAO.deleteUser() //REMOVER
+//        UserDAO.deleteUser() //REMOVER
         self.loggedVerify()
         return true
     }
     
     func loggedVerify(){
-        guard UserDAO.getUser() != nil else {
+        guard let user = UserDAO.getUser() else {
             let navigationController = UINavigationController(rootViewController: LoginViewController())
             navigationController.navigationBar.isHidden = true
             self.window?.rootViewController = navigationController
             return
         }
         let navigationController = UINavigationController(rootViewController: MainViewController())
+        APIManager.sharedInstance.accessToken = user.token ?? ""
         self.window?.rootViewController = navigationController
     }
 
