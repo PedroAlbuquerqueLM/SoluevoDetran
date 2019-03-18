@@ -52,6 +52,23 @@ class ListContractsViewController: UIViewController {
         contractsTableView.register(ContractCell.self, forCellReuseIdentifier: "ContractCell")
         contractsTableView.register(HeaderCell.self, forCellReuseIdentifier: "HeaderCell")
         
+        let exitItem = UIBarButtonItem(title: "Sair", style: .done, target: self, action: #selector(logout))
+        exitItem.tintColor = .black
+        self.navigationItem.rightBarButtonItem = exitItem
+        
+        let profileItem = UIBarButtonItem(image: #imageLiteral(resourceName: "profileIcon"), style: .plain, target: self, action: nil)
+        profileItem.tintColor = .black
+        
+        let titleItem = UIBarButtonItem(title: UserDAO.getUser()?.name, style: .done, target: self, action: nil)
+        titleItem.tintColor = .black
+        
+        self.navigationItem.leftBarButtonItems = [profileItem, titleItem]
+        
+        
+    }
+    
+    @objc func logout(){
+        SessionManager.logout()
     }
 }
 

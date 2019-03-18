@@ -36,5 +36,13 @@ class ContractDAO {
     static func getContractsByUser() -> [ContractModel] {
         return ContractDAO.getContracts().filter{$0.financialUsersUuid == UserDAO.getUser()?.uuid}
     }
+    
+    static func deleteAll() {
+        let realm = RealmManager.getRealm()
+        try! realm.write {
+            let contracts = RealmManager.getRealm().objects(ContractModel.self)
+            realm.delete(contracts)
+        }
+    }
 }
 

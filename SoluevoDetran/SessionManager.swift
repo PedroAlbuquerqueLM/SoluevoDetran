@@ -26,6 +26,7 @@ class SessionManager {
     
     class func logout(){
         UserDAO.deleteUser()
+        ContractDAO.deleteAll()
         SessionManager.loggedVerify()
     }
 }
