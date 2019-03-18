@@ -174,6 +174,14 @@ extension UIColor {
     public class var greenDetran: UIColor {
         return UIColor("#03652A")
     }
+    
+    public class var grayDetran: UIColor {
+        return UIColor("#484747")
+    }
+    
+    public class var lightGrayDetran: UIColor {
+        return UIColor("#9B9B9B")
+    }
 }
 
 public struct ScreenSize {

@@ -99,7 +99,7 @@ class LoginViewController: UIViewController {
             self.detranLogo.image = state.image
         }
         viewModel.signIn = { [unowned self] in
-            self.appDelegate.loggedVerify()
+            SessionManager.loggedVerify()
         }
     }
     

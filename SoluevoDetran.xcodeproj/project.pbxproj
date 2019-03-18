@@ -10,7 +10,6 @@
 		6E6FB5D67AB269719F801B68 /* Pods_SoluevoDetranTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46BD8341FEAACBE2DF20BF9 /* Pods_SoluevoDetranTests.framework */; };
 		710724272237FB1200E92D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710724262237FB1200E92D55 /* AppDelegate.swift */; };
 		710724292237FB1200E92D55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710724282237FB1200E92D55 /* LoginViewController.swift */; };
-		7107242C2237FB1200E92D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7107242A2237FB1200E92D55 /* Main.storyboard */; };
 		7107242E2237FB1400E92D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7107242D2237FB1400E92D55 /* Assets.xcassets */; };
 		710724312237FB1400E92D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7107242F2237FB1400E92D55 /* LaunchScreen.storyboard */; };
 		7107243C2237FB1400E92D55 /* SoluevoDetranTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107243B2237FB1400E92D55 /* SoluevoDetranTests.swift */; };
@@ -21,10 +20,13 @@
 		710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */; };
 		710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */; };
 		710C92B1223D862500B8EEE5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B0223D862500B8EEE5 /* State.swift */; };
-		710C92B3223D8F1500B8EEE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B2223D8F1500B8EEE5 /* MainViewController.swift */; };
+		710C92B3223D8F1500B8EEE5 /* ListContractsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */; };
 		710C92B5223F3D1300B8EEE5 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B4223F3D1300B8EEE5 /* Contract.swift */; };
 		710C92B7223F3D9000B8EEE5 /* ContractDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */; };
 		710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */; };
+		710C92BB223F468B00B8EEE5 /* ContractCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BA223F468B00B8EEE5 /* ContractCell.swift */; };
+		710C92BD223F481300B8EEE5 /* SLStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BC223F481300B8EEE5 /* SLStatusView.swift */; };
+		710C92BF223F4E0C00B8EEE5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */; };
 		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
@@ -58,7 +60,6 @@
 		710724232237FB1200E92D55 /* SoluevoDetran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoluevoDetran.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710724262237FB1200E92D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		710724282237FB1200E92D55 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7107242B2237FB1200E92D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7107242D2237FB1400E92D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		710724302237FB1400E92D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		710724322237FB1400E92D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,10 +76,13 @@
 		710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTextFieldView.swift; sourceTree = "<group>"; };
 		710C92B0223D862500B8EEE5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		710C92B2223D8F1500B8EEE5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContractsViewController.swift; sourceTree = "<group>"; };
 		710C92B4223F3D1300B8EEE5 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDAO.swift; sourceTree = "<group>"; };
 		710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsViewModel.swift; sourceTree = "<group>"; };
+		710C92BA223F468B00B8EEE5 /* ContractCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractCell.swift; sourceTree = "<group>"; };
+		710C92BC223F481300B8EEE5 /* SLStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLStatusView.swift; sourceTree = "<group>"; };
+		710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			children = (
 				710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */,
 				710724262237FB1200E92D55 /* AppDelegate.swift */,
+				710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */,
 				710C92AD223D710F00B8EEE5 /* Views */,
 				710C92AC223D6FBC00B8EEE5 /* Controllers */,
 				710C92AB223D6FAE00B8EEE5 /* ViewModels */,
@@ -164,7 +169,6 @@
 				710B1C7E223B51E70059F2FB /* DAO */,
 				715C84D92239875300B844D1 /* Models */,
 				717C70F62239841500A197CD /* API */,
-				7107242A2237FB1200E92D55 /* Main.storyboard */,
 				7107242D2237FB1400E92D55 /* Assets.xcassets */,
 				7107242F2237FB1400E92D55 /* LaunchScreen.storyboard */,
 				710724322237FB1400E92D55 /* Info.plist */,
@@ -221,7 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				710724282237FB1200E92D55 /* LoginViewController.swift */,
-				710C92B2223D8F1500B8EEE5 /* MainViewController.swift */,
+				710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */,
+				710C92BA223F468B00B8EEE5 /* ContractCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */,
+				710C92BC223F481300B8EEE5 /* SLStatusView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,7 +389,6 @@
 			files = (
 				710724312237FB1400E92D55 /* LaunchScreen.storyboard in Resources */,
 				7107242E2237FB1400E92D55 /* Assets.xcassets in Resources */,
-				7107242C2237FB1200E92D55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,11 +530,13 @@
 				710724272237FB1200E92D55 /* AppDelegate.swift in Sources */,
 				710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */,
 				710C92B5223F3D1300B8EEE5 /* Contract.swift in Sources */,
+				710C92BD223F481300B8EEE5 /* SLStatusView.swift in Sources */,
 				715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */,
 				715C84DB2239875F00B844D1 /* User.swift in Sources */,
 				710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */,
 				717C71012239844D00A197CD /* LoginRouter.swift in Sources */,
-				710C92B3223D8F1500B8EEE5 /* MainViewController.swift in Sources */,
+				710C92B3223D8F1500B8EEE5 /* ListContractsViewController.swift in Sources */,
+				710C92BB223F468B00B8EEE5 /* ContractCell.swift in Sources */,
 				710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */,
 				717C71022239844D00A197CD /* RouterManager.swift in Sources */,
 				710C92B1223D862500B8EEE5 /* State.swift in Sources */,
@@ -537,6 +544,7 @@
 				717C71002239844D00A197CD /* APIManager.swift in Sources */,
 				710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */,
 				710C92B7223F3D9000B8EEE5 /* ContractDAO.swift in Sources */,
+				710C92BF223F4E0C00B8EEE5 /* SessionManager.swift in Sources */,
 				710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,14 +581,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7107242A2237FB1200E92D55 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7107242B2237FB1200E92D55 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7107242F2237FB1400E92D55 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
