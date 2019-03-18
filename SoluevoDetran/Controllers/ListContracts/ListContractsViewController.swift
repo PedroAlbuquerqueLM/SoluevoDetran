@@ -50,28 +50,46 @@ class ListContractsViewController: UIViewController {
         contractsTableView.dataSource = self
         contractsTableView.delegate = self
         contractsTableView.register(ContractCell.self, forCellReuseIdentifier: "ContractCell")
+        contractsTableView.register(HeaderCell.self, forCellReuseIdentifier: "HeaderCell")
         
     }
 }
 
 extension ListContractsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.contracts?.count ?? 0
+        return (viewModel.contracts?.count ?? 0 ) + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContractCell", for: indexPath) as? ContractCell else {
-            return ContractCell()
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else {
+                return ContractCell()
+            }
+            
+            cell.set(title: "Contratos", type: .add)
+            cell.delegate = self
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContractCell", for: indexPath) as? ContractCell else {
+                return ContractCell()
+            }
+            
+            cell.contract = viewModel.contracts?[indexPath.row - 1]
+            return cell
         }
-        
-        cell.contract = viewModel.contracts?[indexPath.row]
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 74
+        }
         return 130
     }
-    
-    
-    
+}
+
+extension ListContractsViewController: HeaderViewDelegate {
+    func clickButtonAction() {
+        print("Open Add Contract")
+    }
 }

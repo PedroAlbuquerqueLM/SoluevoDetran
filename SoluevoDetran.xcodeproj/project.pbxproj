@@ -27,6 +27,7 @@
 		710C92BB223F468B00B8EEE5 /* ContractCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BA223F468B00B8EEE5 /* ContractCell.swift */; };
 		710C92BD223F481300B8EEE5 /* SLStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BC223F481300B8EEE5 /* SLStatusView.swift */; };
 		710C92BF223F4E0C00B8EEE5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */; };
+		710C92C2223F552800B8EEE5 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92C1223F552800B8EEE5 /* HeaderCell.swift */; };
 		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
@@ -83,6 +84,7 @@
 		710C92BA223F468B00B8EEE5 /* ContractCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractCell.swift; sourceTree = "<group>"; };
 		710C92BC223F481300B8EEE5 /* SLStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLStatusView.swift; sourceTree = "<group>"; };
 		710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		710C92C1223F552800B8EEE5 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -225,8 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				710724282237FB1200E92D55 /* LoginViewController.swift */,
-				710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */,
-				710C92BA223F468B00B8EEE5 /* ContractCell.swift */,
+				710C92C0223F54D500B8EEE5 /* ListContracts */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,8 +237,18 @@
 			children = (
 				710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */,
 				710C92BC223F481300B8EEE5 /* SLStatusView.swift */,
+				710C92C1223F552800B8EEE5 /* HeaderCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		710C92C0223F54D500B8EEE5 /* ListContracts */ = {
+			isa = PBXGroup;
+			children = (
+				710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */,
+				710C92BA223F468B00B8EEE5 /* ContractCell.swift */,
+			);
+			path = ListContracts;
 			sourceTree = "<group>";
 		};
 		715C84D92239875300B844D1 /* Models */ = {
@@ -539,6 +550,7 @@
 				710C92BB223F468B00B8EEE5 /* ContractCell.swift in Sources */,
 				710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */,
 				717C71022239844D00A197CD /* RouterManager.swift in Sources */,
+				710C92C2223F552800B8EEE5 /* HeaderCell.swift in Sources */,
 				710C92B1223D862500B8EEE5 /* State.swift in Sources */,
 				710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */,
 				717C71002239844D00A197CD /* APIManager.swift in Sources */,
