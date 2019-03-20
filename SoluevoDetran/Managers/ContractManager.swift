@@ -10,7 +10,7 @@ import Foundation
 
 class ContractsManager {
     
-    class func getContractObj() -> FormConfig? {
+    class func getContractObj() -> Form? {
         switch UserDAO.getUser()?.financialsCode {
         case 1001:
             return Contract1001()

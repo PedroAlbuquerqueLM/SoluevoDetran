@@ -10,21 +10,6 @@ import Foundation
 import SwiftDate
 import UIKit
 
-typealias DicForm = [String : (title: String, obj: Any)]
-typealias DicFormSection = [String : (title: String, obj: DicForm)]
-
-protocol FormConfig: class {
-    var dicForm: DicFormSection {get set}
-    func getJSON() -> [String : String]?
-    func setValue(section: String, row: String, value: Any)
-}
-
-extension FormConfig {
-    func setValue(section: String, row: String, value: Any){
-        self.dicForm[section]?.obj[row]?.obj = value
-    }
-}
-
 extension UIViewController {
     var appDelegate: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -246,8 +231,10 @@ extension String {
     }
     
     func cast(type: Any) -> Any {
-        if type is Double { return self.toDouble }
-        else if type is Int { return self.toInt }
+        if compareType(varType: type, typeValue: Double.self) { return self.toDouble }
+        else if compareType(varType: type, typeValue: Int.self) {
+            return self.toInt
+        }
         return self
     }
     
@@ -279,4 +266,8 @@ extension Date {
         guard let year = Int(format.string(from: self)) else {return 0}
         return year
     }
+}
+
+func compareType<T>(varType: Any, typeValue: T) -> Bool {
+    return "\(varType)" == "\(type(of: typeValue))"
 }
