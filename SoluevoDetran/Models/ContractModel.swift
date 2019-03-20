@@ -16,6 +16,7 @@ class ContractModel: Object {
     @objc dynamic var financialUsersUuid: String?
     @objc dynamic var statusDetran: Bool = false
     @objc dynamic var status: Bool = false
+    @objc dynamic var lastUpdated: Date?
     @objc dynamic var financialsCode = 0
     
     override static func primaryKey() -> String? {

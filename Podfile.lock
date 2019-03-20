@@ -15,6 +15,7 @@ PODS:
   - Realm/Headers (3.13.1)
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
+  - SwiftDate (5.1.0)
   - SwiftMessages (6.0.2):
     - SwiftMessages/App (= 6.0.2)
   - SwiftMessages/App (6.0.2)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - McPicker
   - NVActivityIndicatorView
   - RealmSwift (~> 3.13)
+  - SwiftDate
   - SwiftMessages (~> 6.0.0)
   - SwiftyJSON
 
@@ -45,6 +47,7 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - Realm
     - RealmSwift
+    - SwiftDate
     - SwiftMessages
     - SwiftyJSON
 
@@ -59,9 +62,10 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 059fc2434620485e93f80f05f16974fc17bdf165
+PODFILE CHECKSUM: b3cc6286691b95f7f0277b7117bce450d20728d6
 
 COCOAPODS: 1.5.3

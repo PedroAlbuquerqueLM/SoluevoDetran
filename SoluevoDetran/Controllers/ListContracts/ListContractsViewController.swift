@@ -30,6 +30,7 @@ class ListContractsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.loadContracts()
+        self.title = ""
     }
     
     func bind() {
@@ -39,7 +40,8 @@ class ListContractsViewController: UIViewController {
     }
     
     func configuraSubviews() {
-        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
+        self.contractsTableView.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         self.view.addSubview(contractsTableView)
         contractsTableView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         contractsTableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
@@ -70,6 +72,7 @@ class ListContractsViewController: UIViewController {
     @objc func logout(){
         SessionManager.logout()
     }
+    
 }
 
 extension ListContractsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -108,5 +111,6 @@ extension ListContractsViewController: UITableViewDataSource, UITableViewDelegat
 extension ListContractsViewController: HeaderViewDelegate {
     func clickButtonAction() {
         print("Open Add Contract")
+        self.show(CadViewController(), sender: nil)
     }
 }

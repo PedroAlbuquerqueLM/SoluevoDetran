@@ -23,14 +23,14 @@ class ContractDAO {
                 newObj.financialUsersUuid = contract["financial_users_uuid"].stringValue
                 newObj.status = contract["status"].boolValue
                 newObj.statusDetran = contract["status_detran"].boolValue
-
+                newObj.lastUpdated = contract["last_update"].stringValue.brazillianISODate
                 realm.add(newObj, update: true)
             }
         }
     }
     
     static func getContracts() -> [ContractModel] {
-        return Array(RealmManager.getRealm().objects(ContractModel.self))
+        return Array(RealmManager.getRealm().objects(ContractModel.self)).sorted(by: { $0.lastUpdated! > $1.lastUpdated! })
     }
     
     static func getContractsByUser() -> [ContractModel] {

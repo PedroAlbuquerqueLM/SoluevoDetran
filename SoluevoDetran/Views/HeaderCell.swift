@@ -24,7 +24,7 @@ class HeaderCell: UITableViewCell {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .avenirBlack(32)
-        label.textColor = .grayDetran
+        label.textColor = .black
         return label
     }()
     
@@ -40,6 +40,7 @@ class HeaderCell: UITableViewCell {
         
         self.clipsToBounds = true
         self.selectionStyle = .none
+        self.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         self.loadSubViews()
     }
     

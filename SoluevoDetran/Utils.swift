@@ -7,7 +7,23 @@
 //
 
 import Foundation
+import SwiftDate
 import UIKit
+
+typealias DicForm = [String : (title: String, obj: Any)]
+typealias DicFormSection = [String : (title: String, obj: DicForm)]
+
+protocol FormConfig: class {
+    var dicForm: DicFormSection {get set}
+    func getJSON() -> [String : String]?
+    func setValue(section: String, row: String, value: Any)
+}
+
+extension FormConfig {
+    func setValue(section: String, row: String, value: Any){
+        self.dicForm[section]?.obj[row]?.obj = value
+    }
+}
 
 extension UIViewController {
     var appDelegate: AppDelegate {
@@ -20,6 +36,14 @@ extension Dictionary {
         let jsonData = try? JSONSerialization.data(withJSONObject: self, options: [])
         let jsonString = String(data: jsonData!, encoding: .utf8)
         return jsonString
+    }
+    
+    func merged(with another: [Key: Value]) -> [Key: Value] {
+        var result = self
+        for entry in another {
+            result[entry.key] = entry.value
+        }
+        return result
     }
 }
 
@@ -191,4 +215,68 @@ public struct ScreenSize {
     static let maxLenght = max(ScreenSize.width, ScreenSize.height)
     static let minLenght = min(ScreenSize.width, ScreenSize.height)
     static let isLarge: Bool = ScreenSize.width > 320
+}
+
+public struct Utils {
+    
+    static let years = Array(1990...Date().year + 1)
+}
+
+extension Array {
+    var toStringValues: [String] {
+        return self.map{"\($0)"}
+    }
+}
+
+extension String {
+    
+    var brazillianISODate: Date {
+        guard let date = self.toISODate(region: .brazil)?.date else {
+            return Date(timeIntervalSince1970: 1)
+        }
+        return date
+    }
+    
+    var removeRats: String{
+        return self
+            .replacingOccurrences(of: "\\\"", with: "\"")
+            .replacingOccurrences(of: "}\"", with: "}")
+            .replacingOccurrences(of: "\"{", with: "{")
+            .replacingOccurrences(of: "}\"}", with: "}}")
+    }
+    
+    func cast(type: Any) -> Any {
+        if type is Double { return self.toDouble }
+        else if type is Int { return self.toInt }
+        return self
+    }
+    
+    var toInt: Int {
+        guard let cast = Int(self) else {return 0}
+        return cast
+    }
+    
+    var toDouble: Double {
+        guard let cast = Double(self) else {return 0}
+        return cast
+    }
+    
+}
+
+extension Region {
+    
+    static var brazil: Region {
+        return Region(calendar: Calendars.gregorian,
+                      zone: TimeZone(identifier: "UTC") ?? Zones.current,
+                      locale: Locales.portugueseBrazil)
+    }
+}
+
+extension Date {
+    var year: Int {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy"
+        guard let year = Int(format.string(from: self)) else {return 0}
+        return year
+    }
 }
