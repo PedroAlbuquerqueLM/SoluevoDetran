@@ -18,6 +18,7 @@ target 'SoluevoDetran' do
 	pod 'Disk'
     pod 'Eureka'
     pod 'McPicker'
+    pod 'SwiftDate'
 
   target 'SoluevoDetranTests' do
     inherit! :search_paths

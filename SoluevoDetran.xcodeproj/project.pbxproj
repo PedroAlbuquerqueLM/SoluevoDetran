@@ -21,14 +21,19 @@
 		710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */; };
 		710C92B1223D862500B8EEE5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B0223D862500B8EEE5 /* State.swift */; };
 		710C92B3223D8F1500B8EEE5 /* ListContractsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */; };
-		710C92B5223F3D1300B8EEE5 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B4223F3D1300B8EEE5 /* Contract.swift */; };
+		710C92B5223F3D1300B8EEE5 /* ContractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B4223F3D1300B8EEE5 /* ContractModel.swift */; };
 		710C92B7223F3D9000B8EEE5 /* ContractDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */; };
 		710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */; };
 		710C92BB223F468B00B8EEE5 /* ContractCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BA223F468B00B8EEE5 /* ContractCell.swift */; };
 		710C92BD223F481300B8EEE5 /* SLStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BC223F481300B8EEE5 /* SLStatusView.swift */; };
 		710C92BF223F4E0C00B8EEE5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */; };
 		710C92C2223F552800B8EEE5 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C92C1223F552800B8EEE5 /* HeaderCell.swift */; };
-		715C84DB2239875F00B844D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* User.swift */; };
+		710E919A223FB3B7003F1824 /* CadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E9199223FB3B7003F1824 /* CadViewController.swift */; };
+		710E91A02240132A003F1824 /* Contract1001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E919F2240132A003F1824 /* Contract1001.swift */; };
+		710E91A22240177F003F1824 /* CadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E91A12240177F003F1824 /* CadViewModel.swift */; };
+		710E91A622407E06003F1824 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E91A522407E06003F1824 /* ContractManager.swift */; };
+		7125E5CB22427C4700C90340 /* FormModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125E5CA22427C4700C90340 /* FormModelManager.swift */; };
+		715C84DB2239875F00B844D1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* UserModel.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
 		717C71012239844D00A197CD /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FE2239844D00A197CD /* LoginRouter.swift */; };
@@ -78,14 +83,19 @@
 		710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTextFieldView.swift; sourceTree = "<group>"; };
 		710C92B0223D862500B8EEE5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContractsViewController.swift; sourceTree = "<group>"; };
-		710C92B4223F3D1300B8EEE5 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		710C92B4223F3D1300B8EEE5 /* ContractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractModel.swift; sourceTree = "<group>"; };
 		710C92B6223F3D9000B8EEE5 /* ContractDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDAO.swift; sourceTree = "<group>"; };
 		710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsViewModel.swift; sourceTree = "<group>"; };
 		710C92BA223F468B00B8EEE5 /* ContractCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractCell.swift; sourceTree = "<group>"; };
 		710C92BC223F481300B8EEE5 /* SLStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLStatusView.swift; sourceTree = "<group>"; };
 		710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		710C92C1223F552800B8EEE5 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		715C84DA2239875F00B844D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		710E9199223FB3B7003F1824 /* CadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadViewController.swift; sourceTree = "<group>"; };
+		710E919F2240132A003F1824 /* Contract1001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract1001.swift; sourceTree = "<group>"; };
+		710E91A12240177F003F1824 /* CadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadViewModel.swift; sourceTree = "<group>"; };
+		710E91A522407E06003F1824 /* ContractManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
+		7125E5CA22427C4700C90340 /* FormModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelManager.swift; sourceTree = "<group>"; };
+		715C84DA2239875F00B844D1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		717C70FE2239844D00A197CD /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -163,11 +173,11 @@
 			children = (
 				710B1C84223B5D160059F2FB /* SoluevoDetran.entitlements */,
 				710724262237FB1200E92D55 /* AppDelegate.swift */,
-				710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */,
+				710B1C7C223B4D1F0059F2FB /* Utils.swift */,
+				7125E5CC22427C9F00C90340 /* Managers */,
 				710C92AD223D710F00B8EEE5 /* Views */,
 				710C92AC223D6FBC00B8EEE5 /* Controllers */,
 				710C92AB223D6FAE00B8EEE5 /* ViewModels */,
-				710B1C7C223B4D1F0059F2FB /* Utils.swift */,
 				710B1C7E223B51E70059F2FB /* DAO */,
 				715C84D92239875300B844D1 /* Models */,
 				717C70F62239841500A197CD /* API */,
@@ -219,6 +229,7 @@
 			children = (
 				710C92A9223D5F1100B8EEE5 /* LoginViewModel.swift */,
 				710C92B8223F42AC00B8EEE5 /* ContractsViewModel.swift */,
+				710E91A12240177F003F1824 /* CadViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				710724282237FB1200E92D55 /* LoginViewController.swift */,
+				710E9199223FB3B7003F1824 /* CadViewController.swift */,
 				710C92C0223F54D500B8EEE5 /* ListContracts */,
 			);
 			path = Controllers;
@@ -245,18 +257,37 @@
 		710C92C0223F54D500B8EEE5 /* ListContracts */ = {
 			isa = PBXGroup;
 			children = (
-				710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */,
 				710C92BA223F468B00B8EEE5 /* ContractCell.swift */,
+				710C92B2223D8F1500B8EEE5 /* ListContractsViewController.swift */,
 			);
 			path = ListContracts;
+			sourceTree = "<group>";
+		};
+		7125E5CC22427C9F00C90340 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				710C92BE223F4E0C00B8EEE5 /* SessionManager.swift */,
+				710E91A522407E06003F1824 /* ContractManager.swift */,
+				7125E5CA22427C4700C90340 /* FormModelManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7125E5CD22427CE300C90340 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				710E919F2240132A003F1824 /* Contract1001.swift */,
+			);
+			path = Contracts;
 			sourceTree = "<group>";
 		};
 		715C84D92239875300B844D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				715C84DA2239875F00B844D1 /* User.swift */,
-				710C92B4223F3D1300B8EEE5 /* Contract.swift */,
+				715C84DA2239875F00B844D1 /* UserModel.swift */,
+				710C92B4223F3D1300B8EEE5 /* ContractModel.swift */,
 				710C92B0223D862500B8EEE5 /* State.swift */,
+				7125E5CD22427CE300C90340 /* Contracts */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -483,6 +514,7 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -500,6 +532,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -540,18 +573,23 @@
 				710724292237FB1200E92D55 /* LoginViewController.swift in Sources */,
 				710724272237FB1200E92D55 /* AppDelegate.swift in Sources */,
 				710C92AA223D5F1100B8EEE5 /* LoginViewModel.swift in Sources */,
-				710C92B5223F3D1300B8EEE5 /* Contract.swift in Sources */,
+				710C92B5223F3D1300B8EEE5 /* ContractModel.swift in Sources */,
 				710C92BD223F481300B8EEE5 /* SLStatusView.swift in Sources */,
 				715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */,
-				715C84DB2239875F00B844D1 /* User.swift in Sources */,
+				715C84DB2239875F00B844D1 /* UserModel.swift in Sources */,
+				7125E5CB22427C4700C90340 /* FormModelManager.swift in Sources */,
 				710B1C80223B51F10059F2FB /* UserDAO.swift in Sources */,
 				717C71012239844D00A197CD /* LoginRouter.swift in Sources */,
 				710C92B3223D8F1500B8EEE5 /* ListContractsViewController.swift in Sources */,
 				710C92BB223F468B00B8EEE5 /* ContractCell.swift in Sources */,
 				710C92AF223D712B00B8EEE5 /* SLTextFieldView.swift in Sources */,
+				710E919A223FB3B7003F1824 /* CadViewController.swift in Sources */,
+				710E91A02240132A003F1824 /* Contract1001.swift in Sources */,
 				717C71022239844D00A197CD /* RouterManager.swift in Sources */,
+				710E91A622407E06003F1824 /* ContractManager.swift in Sources */,
 				710C92C2223F552800B8EEE5 /* HeaderCell.swift in Sources */,
 				710C92B1223D862500B8EEE5 /* State.swift in Sources */,
+				710E91A22240177F003F1824 /* CadViewModel.swift in Sources */,
 				710B1C83223B546D0059F2FB /* RealmManager.swift in Sources */,
 				717C71002239844D00A197CD /* APIManager.swift in Sources */,
 				710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */,
