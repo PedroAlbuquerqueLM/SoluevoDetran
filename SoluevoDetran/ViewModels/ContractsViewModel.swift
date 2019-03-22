@@ -14,8 +14,8 @@ protocol ContractsViewModelState: class {
 }
 
 class ContractsViewModel: ContractsViewModelState {
-    var getContracts: (() -> Void)?
     
+    var getContracts: (() -> Void)?
     var contracts: [ContractModel]?
     
     func loadContracts() {

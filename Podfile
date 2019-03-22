@@ -19,6 +19,9 @@ target 'SoluevoDetran' do
     pod 'Eureka'
     pod 'McPicker'
     pod 'SwiftDate'
+    pod 'FCAlertView'
+    pod 'ImagePicker', :git => 'https://github.com/appsailor/ImagePicker.git', :branch => 'feature/Swift-4.2'
+    pod 'SwiftMessageBar'
 
   target 'SoluevoDetranTests' do
     inherit! :search_paths

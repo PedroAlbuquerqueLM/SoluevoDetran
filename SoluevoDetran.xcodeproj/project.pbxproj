@@ -38,6 +38,7 @@
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
 		717C71012239844D00A197CD /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FE2239844D00A197CD /* LoginRouter.swift */; };
 		717C71022239844D00A197CD /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FF2239844D00A197CD /* RouterManager.swift */; };
+		71D310822245243E002E0A7D /* SLMessageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D310812245243E002E0A7D /* SLMessageBar.swift */; };
 		E0413BE6F799E9AE36A236E2 /* Pods_SoluevoDetranUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8D7FA442DE67101412EC8E /* Pods_SoluevoDetranUITests.framework */; };
 		E1830989F733EC1CF17CAE78 /* Pods_SoluevoDetran.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847D05020AF328F0445B4CDA /* Pods_SoluevoDetran.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		717C70FE2239844D00A197CD /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		717C70FF2239844D00A197CD /* RouterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
+		71D310812245243E002E0A7D /* SLMessageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMessageBar.swift; sourceTree = "<group>"; };
 		78FEC21E365E61A6B7380CCC /* Pods-SoluevoDetranUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetranUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetranUITests/Pods-SoluevoDetranUITests.release.xcconfig"; sourceTree = "<group>"; };
 		847D05020AF328F0445B4CDA /* Pods_SoluevoDetran.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoluevoDetran.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2C5FB5B2763B47F261B568 /* Pods-SoluevoDetranTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoluevoDetranTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoluevoDetranTests/Pods-SoluevoDetranTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				710C92AE223D712B00B8EEE5 /* SLTextFieldView.swift */,
 				710C92BC223F481300B8EEE5 /* SLStatusView.swift */,
 				710C92C1223F552800B8EEE5 /* HeaderCell.swift */,
+				71D310812245243E002E0A7D /* SLMessageBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -508,13 +511,16 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessageBar/SwiftMessageBar.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -526,13 +532,16 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessageBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -586,6 +595,7 @@
 				710E919A223FB3B7003F1824 /* CadViewController.swift in Sources */,
 				710E91A02240132A003F1824 /* Contract1001.swift in Sources */,
 				717C71022239844D00A197CD /* RouterManager.swift in Sources */,
+				71D310822245243E002E0A7D /* SLMessageBar.swift in Sources */,
 				710E91A622407E06003F1824 /* ContractManager.swift in Sources */,
 				710C92C2223F552800B8EEE5 /* HeaderCell.swift in Sources */,
 				710C92B1223D862500B8EEE5 /* State.swift in Sources */,
