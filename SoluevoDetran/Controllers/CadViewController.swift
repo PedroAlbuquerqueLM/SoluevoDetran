@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import ImagePicker
 
 class CadViewController: FormViewController {
     
@@ -31,6 +32,7 @@ class CadViewController: FormViewController {
     func loadSubViews(){
         self.formullary = form
         guard let contractForm = viewModel.contract else {return}
+        self.getHeaderRows()
         self.loadFormViews(form: contractForm)
         
     }
@@ -42,7 +44,7 @@ class CadViewController: FormViewController {
     }
     
     @objc func save(){
-        viewModel.saveContract(code: 777888179)
+        viewModel.saveContract()
     }
     
     func loadFormViews(form: Form){
@@ -54,6 +56,39 @@ class CadViewController: FormViewController {
                 newSection.append(textRow)
             }
         }
+    }
+    
+    func getHeaderRows(isWithImage: Bool? = true){
+        let newSection = Section("")
+        let textRow = TextRow(){ row in
+            row.title = "Número do Contrato"
+            row.placeholder = "-"
+            row.cell.textField.keyboardType = .numberPad
+            }.cellUpdate { cell, textRow in
+                guard let valueRow = textRow.value else {return}
+                self.viewModel.code = valueRow
+        }
+        
+        let btnRow = ButtonRow() {
+            $0.title = "Adicionar Imagem"
+            }
+            .onCellSelection {  cell, row in
+                self.openGallery()
+        }
+        
+        newSection.append(textRow)
+        if (isWithImage ?? true) { newSection.append(btnRow) }
+        self.formullary?.append(newSection)
+        
+    }
+    
+    func openGallery(){
+        Configuration.doneButtonTitle = "Salvar"
+        Configuration.noImagesTitle = "Desculpe! Nenhuma imagem disponível!"
+        let imagePickerController = ImagePickerController()
+        imagePickerController.imageLimit = 1
+        imagePickerController.delegate = self
+        self.present(imagePickerController, animated: true, completion: nil)
     }
     
     func getTextRow(section: FormSection, row: FormRow) -> TextRow {
@@ -72,5 +107,39 @@ class CadViewController: FormViewController {
                     row.value = valueRow.cast(type: row.type)
             }
             return textRow
+    }
+}
+
+extension CadViewController: ImagePickerDelegate, UIImagePickerControllerDelegate,UIPopoverControllerDelegate,UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.viewModel.image = chosenImage
+        self.tableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        imagePicker.dismiss(animated: false, completion: nil)
+        let picker:UIImagePickerController? = UIImagePickerController()
+        picker!.allowsEditing = false
+        picker?.delegate = self
+        picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
+        self.present(picker!, animated: true, completion: nil)
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        print(images)
+        self.viewModel.image = images.first
+        self.tableView.reloadData()
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }

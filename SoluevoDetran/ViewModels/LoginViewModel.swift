@@ -48,6 +48,7 @@ class LoginViewModel: LoginViewModelState {
                 UserDAO.saveUser(json: json)
                 APIManager.sharedInstance.setToken(user: UserDAO.getUser()!)
                 self.signIn?()
+                SLMessageBar.showMessageBar(isSuccess: true, message: "Seja bem-vindo \(UserDAO.getUser()?.name ?? "")")
             }else{
                 print("ERRO NO LOGIN")
             }
