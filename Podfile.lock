@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.1)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - AlamofireNetworkActivityLogger (2.3.0):
     - Alamofire (~> 4.6)
   - Disk (0.4.0)
@@ -26,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.5)
   - AlamofireNetworkActivityLogger
   - Disk
   - Eureka
@@ -44,6 +47,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
     - AlamofireNetworkActivityLogger
     - Disk
     - Eureka
@@ -71,6 +75,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
   Disk: ef2956657d5bb56034b38b29b352170165226440
   Eureka: 28ea296f06710f6745266b71f17862048941a32d
@@ -87,6 +92,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: d807a94a8fa36e6b392bed1cfe36c2cc28dafbd4
+PODFILE CHECKSUM: 405361983bf668a9d70c3d5360c36ae0df1747aa
 
 COCOAPODS: 1.5.3

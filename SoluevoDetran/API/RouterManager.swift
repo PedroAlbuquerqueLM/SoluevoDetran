@@ -52,7 +52,6 @@ extension RouterConfig {
     }
 
     func asURLRequest() throws -> URLRequest {
-
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         if let dataBody = (params?.toJsonString)?.data(using: .utf8){
@@ -61,7 +60,6 @@ extension RouterConfig {
         urlRequest.allHTTPHeaderFields = headers
         return urlRequest
     }
-
 }
 
 public enum task {
@@ -74,12 +72,15 @@ enum RouterManager: URLRequestConvertible {
     
     case loginRouter(route: LoginRouter)
     case contractsRouter(route: ContractsRouter)
+    case contractsFileRouter(route: ContractsFileRouter)
 
     func getroute() -> RouterConfig {
         switch self {
         case .loginRouter(let route):
             return route
         case .contractsRouter(let route):
+            return route
+        case .contractsFileRouter(let route):
             return route
         }
     }

@@ -6,7 +6,9 @@
 //  Copyright © 2019 Pedro Albuquerque. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import AlamofireImage
+import Alamofire
 
 protocol ContractsViewModelState: class {
     
@@ -17,6 +19,7 @@ class ContractsViewModel: ContractsViewModelState {
     
     var getContracts: (() -> Void)?
     var contracts: [ContractModel]?
+    var contractSelected: ContractModel?
     
     func loadContracts() {
         let route = RouterManager.contractsRouter(route: .getContracts())
@@ -29,6 +32,21 @@ class ContractsViewModel: ContractsViewModelState {
             }else{
                 print("ERRO")
             }
+        }
+    }
+    
+    func uploadImage(_ image: UIImage){
+        guard let code = contractSelected?.code else {return}
+        let imageData = image.pngData() ?? Data()
+        let params: APIParams = ["fileext": "png",
+                                 "contract_code": code,
+                                 "filename": "teste.png",
+                                 "filecontent": imageData.base64EncodedString()
+        ]
+        
+        let route = RouterManager.contractsFileRouter(route: .saveContractFile(params: params))
+        APIManager.sharedInstance.request(route: route) { json in
+//            let filename = json["Filename"].stringValue
         }
     }
 }

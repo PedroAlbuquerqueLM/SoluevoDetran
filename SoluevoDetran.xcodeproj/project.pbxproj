@@ -35,6 +35,7 @@
 		7125E5CB22427C4700C90340 /* FormModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125E5CA22427C4700C90340 /* FormModelManager.swift */; };
 		715C84DB2239875F00B844D1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DA2239875F00B844D1 /* UserModel.swift */; };
 		715C84DD22399A4F00B844D1 /* ContractsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C84DC22399A4F00B844D1 /* ContractsRouter.swift */; };
+		717B5A5E224543AC00C791EE /* ContractsFileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B5A5D224543AC00C791EE /* ContractsFileRouter.swift */; };
 		717C71002239844D00A197CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FD2239844D00A197CD /* APIManager.swift */; };
 		717C71012239844D00A197CD /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FE2239844D00A197CD /* LoginRouter.swift */; };
 		717C71022239844D00A197CD /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C70FF2239844D00A197CD /* RouterManager.swift */; };
@@ -98,6 +99,7 @@
 		7125E5CA22427C4700C90340 /* FormModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelManager.swift; sourceTree = "<group>"; };
 		715C84DA2239875F00B844D1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		715C84DC22399A4F00B844D1 /* ContractsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsRouter.swift; sourceTree = "<group>"; };
+		717B5A5D224543AC00C791EE /* ContractsFileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsFileRouter.swift; sourceTree = "<group>"; };
 		717C70FD2239844D00A197CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		717C70FE2239844D00A197CD /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		717C70FF2239844D00A197CD /* RouterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				717C70FF2239844D00A197CD /* RouterManager.swift */,
 				717C70FE2239844D00A197CD /* LoginRouter.swift */,
 				715C84DC22399A4F00B844D1 /* ContractsRouter.swift */,
+				717B5A5D224543AC00C791EE /* ContractsFileRouter.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SoluevoDetran/Pods-SoluevoDetran-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
@@ -529,6 +533,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
@@ -605,6 +610,7 @@
 				710C92B9223F42AC00B8EEE5 /* ContractsViewModel.swift in Sources */,
 				710C92B7223F3D9000B8EEE5 /* ContractDAO.swift in Sources */,
 				710C92BF223F4E0C00B8EEE5 /* SessionManager.swift in Sources */,
+				717B5A5E224543AC00C791EE /* ContractsFileRouter.swift in Sources */,
 				710B1C7D223B4D1F0059F2FB /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

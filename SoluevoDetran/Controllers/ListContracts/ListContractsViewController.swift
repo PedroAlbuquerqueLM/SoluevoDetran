@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ImagePicker
+import AlamofireImage
 
 class ListContractsViewController: UIViewController {
     
@@ -69,6 +71,15 @@ class ListContractsViewController: UIViewController {
         
     }
     
+    func openGallery(){
+        Configuration.doneButtonTitle = "Salvar"
+        Configuration.noImagesTitle = "Desculpe! Nenhuma imagem disponível!"
+        let imagePickerController = ImagePickerController()
+        imagePickerController.imageLimit = 1
+        imagePickerController.delegate = self
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
     @objc func logout(){
         SessionManager.logout()
     }
@@ -110,7 +121,42 @@ extension ListContractsViewController: UITableViewDataSource, UITableViewDelegat
 
 extension ListContractsViewController: HeaderViewDelegate {
     func clickButtonAction() {
-        print("Open Add Contract")
         self.show(CadViewController(), sender: nil)
+    }
+}
+
+extension ListContractsViewController: ImagePickerDelegate, UIImagePickerControllerDelegate,UIPopoverControllerDelegate,UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.viewModel.uploadImage(chosenImage)
+        
+        contractsTableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        imagePicker.dismiss(animated: false, completion: nil)
+        let picker:UIImagePickerController? = UIImagePickerController()
+        picker!.allowsEditing = false
+        picker?.delegate = self
+        picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
+        self.present(picker!, animated: true, completion: nil)
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        if let image = images.first {
+            self.viewModel.uploadImage(image)
+            contractsTableView.reloadData()
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }
