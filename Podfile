@@ -23,6 +23,7 @@ target 'SoluevoDetran' do
     pod 'ImagePicker', :git => 'https://github.com/appsailor/ImagePicker.git', :branch => 'feature/Swift-4.2'
     pod 'SwiftMessageBar'
     pod 'AlamofireImage', '~> 3.5'
+    pod 'JGProgressHUD'
 
   target 'SoluevoDetranTests' do
     inherit! :search_paths

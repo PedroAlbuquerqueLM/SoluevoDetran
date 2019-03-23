@@ -10,6 +10,7 @@ PODS:
   - FontAwesome.swift (1.4.8)
   - ImagePicker (3.2.0)
   - IQKeyboardManager (6.2.0)
+  - JGProgressHUD (2.0.3)
   - McPicker (2.0.0)
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - FontAwesome.swift
   - ImagePicker (from `https://github.com/appsailor/ImagePicker.git`, branch `feature/Swift-4.2`)
   - IQKeyboardManager
+  - JGProgressHUD
   - McPicker
   - NVActivityIndicatorView
   - RealmSwift (~> 3.13)
@@ -54,6 +56,7 @@ SPEC REPOS:
     - FCAlertView
     - FontAwesome.swift
     - IQKeyboardManager
+    - JGProgressHUD
     - McPicker
     - NVActivityIndicatorView
     - Realm
@@ -83,6 +86,7 @@ SPEC CHECKSUMS:
   FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
   ImagePicker: 456b7fab7022f1f7d8adad42b43d20963c9b5cea
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   McPicker: 1d11ad8c07c337a16dd9397e45f321125304cbb0
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
@@ -92,6 +96,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 405361983bf668a9d70c3d5360c36ae0df1747aa
+PODFILE CHECKSUM: 4e6533cc26420c732bd712b9c857f304ebc3c425
 
 COCOAPODS: 1.5.3

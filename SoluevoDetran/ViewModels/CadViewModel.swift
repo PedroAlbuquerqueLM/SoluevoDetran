@@ -14,12 +14,10 @@ import AlamofireImage
 protocol CadViewModelState: class {
     
     var contractSaved: (() -> Void)? { get }
-    var imageUploaded: (() -> Void)? { get }
 }
 
 class CadViewModel: CadViewModelState {
     var contractSaved: (() -> Void)?
-    var imageUploaded: (() -> Void)?
     
     var code: String?
     let contract = ContractsManager.getContractObj()

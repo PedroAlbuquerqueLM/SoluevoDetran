@@ -13,15 +13,21 @@ import Alamofire
 protocol ContractsViewModelState: class {
     
     var getContracts: (() -> Void)? { get }
+    var startLoadingAnimating: (() -> Void)? { get }
+    var endLoadingAnimating: (() -> Void)? { get }
 }
 
 class ContractsViewModel: ContractsViewModelState {
     
     var getContracts: (() -> Void)?
+    var startLoadingAnimating: (() -> Void)?
+    var endLoadingAnimating: (() -> Void)?
+    
     var contracts: [ContractModel]?
     var contractSelected: ContractModel?
     
     func loadContracts() {
+        self.startLoadingAnimating?()
         let route = RouterManager.contractsRouter(route: .getContracts())
         APIManager.sharedInstance.request(route: route) { json in
             if json["statusCode"].intValue == 200 {
@@ -32,21 +38,7 @@ class ContractsViewModel: ContractsViewModelState {
             }else{
                 print("ERRO")
             }
-        }
-    }
-    
-    func uploadImage(_ image: UIImage){
-        guard let code = contractSelected?.code else {return}
-        let imageData = image.pngData() ?? Data()
-        let params: APIParams = ["fileext": "png",
-                                 "contract_code": code,
-                                 "filename": "teste.png",
-                                 "filecontent": imageData.base64EncodedString()
-        ]
-        
-        let route = RouterManager.contractsFileRouter(route: .saveContractFile(params: params))
-        APIManager.sharedInstance.request(route: route) { json in
-//            let filename = json["Filename"].stringValue
+            self.endLoadingAnimating?()
         }
     }
 }
