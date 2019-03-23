@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ListContractsViewController: UIViewController {
+    
+    let hud = JGProgressHUD(style: .dark)
     
     lazy var contractsTableView: UITableView = {
         let table = UITableView(frame: .zero)
@@ -30,12 +33,19 @@ class ListContractsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.loadContracts()
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.title = ""
     }
     
     func bind() {
         viewModel.getContracts = { [unowned self] in
             self.contractsTableView.reloadData()
+        }
+        viewModel.startLoadingAnimating = { [unowned self] in
+            self.hud.show(in: self.view)
+        }
+        viewModel.endLoadingAnimating = { [unowned self] in
+            self.hud.dismiss()
         }
     }
     
@@ -65,7 +75,7 @@ class ListContractsViewController: UIViewController {
         titleItem.tintColor = .black
         
         self.navigationItem.leftBarButtonItems = [profileItem, titleItem]
-        
+        hud.textLabel.text = "Carregando"
         
     }
     
@@ -87,8 +97,8 @@ extension ListContractsViewController: UITableViewDataSource, UITableViewDelegat
                 return ContractCell()
             }
             
-            cell.set(title: "Contratos", type: .add)
-            cell.delegate = self
+            cell.headerView.set(title: "Contratos", type: .add)
+            cell.headerView.delegate = self
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContractCell", for: indexPath) as? ContractCell else {
@@ -98,6 +108,13 @@ extension ListContractsViewController: UITableViewDataSource, UITableViewDelegat
             cell.contract = viewModel.contracts?[indexPath.row - 1]
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contractSelected = viewModel.contracts?[indexPath.row - 1]
+        let controller = ContractViewController()
+        controller.viewModel.contract = contractSelected
+        self.show(controller, sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -110,7 +127,6 @@ extension ListContractsViewController: UITableViewDataSource, UITableViewDelegat
 
 extension ListContractsViewController: HeaderViewDelegate {
     func clickButtonAction() {
-        print("Open Add Contract")
         self.show(CadViewController(), sender: nil)
     }
 }

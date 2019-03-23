@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import AlamofireImage
 
 protocol CadViewModelState: class {
     
@@ -15,10 +17,11 @@ protocol CadViewModelState: class {
 }
 
 class CadViewModel: CadViewModelState {
-    var code: String?
     var contractSaved: (() -> Void)?
+    
+    var code: String?
     let contract = ContractsManager.getContractObj()
-    var image: UIImage?
+    var images = [UIImage]()
     
     func saveContract(){
         guard let code = code else {

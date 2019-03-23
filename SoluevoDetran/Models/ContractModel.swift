@@ -6,7 +6,7 @@
 //  Copyright © 2019 Pedro Albuquerque. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 import SwiftyJSON
 

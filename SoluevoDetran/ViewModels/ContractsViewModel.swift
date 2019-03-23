@@ -6,19 +6,28 @@
 //  Copyright © 2019 Pedro Albuquerque. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import AlamofireImage
+import Alamofire
 
 protocol ContractsViewModelState: class {
     
     var getContracts: (() -> Void)? { get }
+    var startLoadingAnimating: (() -> Void)? { get }
+    var endLoadingAnimating: (() -> Void)? { get }
 }
 
 class ContractsViewModel: ContractsViewModelState {
     
     var getContracts: (() -> Void)?
+    var startLoadingAnimating: (() -> Void)?
+    var endLoadingAnimating: (() -> Void)?
+    
     var contracts: [ContractModel]?
+    var contractSelected: ContractModel?
     
     func loadContracts() {
+        self.startLoadingAnimating?()
         let route = RouterManager.contractsRouter(route: .getContracts())
         APIManager.sharedInstance.request(route: route) { json in
             if json["statusCode"].intValue == 200 {
@@ -29,6 +38,7 @@ class ContractsViewModel: ContractsViewModelState {
             }else{
                 print("ERRO")
             }
+            self.endLoadingAnimating?()
         }
     }
 }

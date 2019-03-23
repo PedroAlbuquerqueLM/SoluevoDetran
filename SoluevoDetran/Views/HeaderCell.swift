@@ -16,7 +16,7 @@ protocol HeaderViewDelegate: class {
     func clickButtonAction()
 }
 
-class HeaderCell: UITableViewCell {
+class HeaderView : UIView {
     
     weak var delegate: HeaderViewDelegate?
     
@@ -35,11 +35,9 @@ class HeaderCell: UITableViewCell {
         return button
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    init(){
+        super.init(frame: CGRect.zero)
         self.clipsToBounds = true
-        self.selectionStyle = .none
         self.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         self.loadSubViews()
     }
@@ -69,6 +67,36 @@ class HeaderCell: UITableViewCell {
         title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 12).isActive = true
         title.rightAnchor.constraint(equalTo: self.button.leftAnchor, constant: -12).isActive = true
         title.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    }
+}
+
+class HeaderCell: UITableViewCell {
+    
+    lazy var headerView: HeaderView = {
+        let header = HeaderView()
+        header.translatesAutoresizingMaskIntoConstraints = false
+        return header
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.clipsToBounds = true
+        self.selectionStyle = .none
+        self.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
+        self.loadSubViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func loadSubViews(){
+        self.addSubview(headerView)
+        headerView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive =  true
+        headerView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: self.topAnchor).isActive =  true
+        headerView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 }
 

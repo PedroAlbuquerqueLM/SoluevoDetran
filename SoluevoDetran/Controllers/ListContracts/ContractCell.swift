@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ContractCell: UITableViewCell {
     
@@ -16,6 +17,7 @@ class ContractCell: UITableViewCell {
             self.contractStatus.set(statusType: .contract, status: contract.status)
             self.detranStatus.set(statusType: .detran, status: contract.statusDetran)
             self.title.text = "Contrato - \(contract.code)"
+            self.getImage()
         }
     }
     
@@ -31,6 +33,10 @@ class ContractCell: UITableViewCell {
         let obj = UIImageView(frame: CGRect.zero)
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.contentMode = .scaleAspectFill
+        obj.clipsToBounds = true
+        obj.layer.cornerRadius = 74/2
+        obj.layer.borderWidth = 1
+        obj.layer.borderColor = #colorLiteral(red: 0.6287905574, green: 0.6258816123, blue: 0.6465913653, alpha: 1)
         obj.image = #imageLiteral(resourceName: "contractIcon")
         return obj
     }()
@@ -97,7 +103,20 @@ class ContractCell: UITableViewCell {
         contractStatus.rightAnchor.constraint(equalTo: self.backgroundCard.rightAnchor, constant: 14).isActive = true
         contractStatus.leftAnchor.constraint(equalTo: self.icon.rightAnchor, constant: 14).isActive = true
         contractStatus.topAnchor.constraint(equalTo: self.detranStatus.bottomAnchor, constant: 8).isActive = true
-        
+    }
+    
+    func getImage(){
+        guard let code = self.contract?.code else {return}
+        let route = RouterManager.contractsFileRouter(route: .getContractsFile(contractCode: code))
+        APIManager.sharedInstance.request(route: route) { json in
+            guard let fileName = json["resultValue"].arrayValue.last?["filename"],
+                  let url = URL(string: "http://159.65.244.68/assets/\(fileName)")
+            else {
+                self.icon.image = #imageLiteral(resourceName: "contractIcon")
+                return
+            }
+            self.icon.af_setImage(withURL: url)
+        }
     }
     
 }
